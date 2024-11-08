@@ -9,24 +9,24 @@ import LoadingBubble from "./components/LoadingBubble";
 import PromptSuggestionsRow from "./components/PromptSuggestionsRow";
 
 const Home = () => {
-    const {
-        append,
-        isLoading,
-        input,
-        handleInputChange,
-        handleSubmit,
-        messages,
-      } = useChat();
+  const {
+    append,
+    isLoading,
+    input,
+    handleInputChange,
+    handleSubmit,
+    messages,
+  } = useChat();
   const noMessages = !messages || messages.length === 0;
 
-  const handlePrompt = ( promptText ) => {
+  const handlePrompt = (promptText) => {
     const msg: Message = {
-        id: crypto.randomUUID(),
-        content: promptText,
-        role: "user"
-    }
-    append(msg)
-  }
+      id: crypto.randomUUID(),
+      content: promptText,
+      role: "user",
+    };
+    append(msg);
+  };
 
   return (
     <main>
@@ -35,17 +35,19 @@ const Home = () => {
         {noMessages ? (
           <>
             <p className="starter-text">
-              The Ultimate place for Seen Apps super fans! Ask Seen Apps GPT
-              anything about Seen Apps and it will come back to you with the
-              most up-to-date answers.
+              The Ultimate place for Seen Apps super fans! Ask anything about
+              Seen Apps and it will come back to you with the most up-to-date
+              answers.
             </p>
             <br />
             <PromptSuggestionsRow onPromptClick={handlePrompt} />
           </>
         ) : (
           <>
-            {messages.map((message, index) => <Bubble key={`message-${index}`} message={message}/>)}
-            { isLoading && <LoadingBubble/>}
+            {messages.map((message, index) => (
+              <Bubble key={`message-${index}`} message={message} />
+            ))}
+            {isLoading && <LoadingBubble />}
           </>
         )}
       </section>
