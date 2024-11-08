@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logo512 from "./assets/logo512.png";
+import seenAppsLogo from "./assets/seen-apps-logo.png";
 import { useChat } from "ai/react";
 import { Message } from "ai";
 import Bubble from "./components/Bubble";
@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <main>
-      <Image src={logo512} alt="Seen Apps Logo" width={100} height={100} />
+      <Image src={seenAppsLogo} alt="Seen Apps Logo" width={200} height={200} />
       <section className={noMessages ? "" : "populated"}>
         {noMessages ? (
           <>

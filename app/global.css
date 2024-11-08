@@ -10,7 +10,7 @@ body {
   align-items: center;
   height: 100vh;
   /* background-image: url("/background.png"); */
-  background-color: grey;
+  background: linear-gradient(to bottom, #d872a0, #af577f);
 }
 
 main {
@@ -48,22 +48,21 @@ form {
   width: 100%;
   height: 50px;
   display: flex;
-  border-top: 2px solid #828282;
-  padding-top: 20px;
   border-radius: 8px;
   overflow: hidden;
 }
 
 input.question-box {
   width: 85%;
-  padding: 10px;
+  height: 100%;
+  padding-left: 10px;
   font-size: 16px;
   color: #383838;
-  border: none;
 }
 
 input[type="submit"] {
   width: 15%;
+  height: 100%;
   font-size: 16px;
   color: #383838;
   border: none;
@@ -99,6 +98,21 @@ input:focus {
   }
 }
 
+.prompt-suggestion-button {
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: none; 
+  background-color: #fff;
+  border-radius: 10px;
+  color: #383838;
+  box-shadow: #959da533 0 8px 24px;
+}
+
+.prompt-suggestion-row {
+ width: 100%;
+}
+
 .bubble {
   margin: 8px;
   padding: 8px;
@@ -106,7 +120,7 @@ input:focus {
   border: none;
   color: #383838;
   box-shadow: #959da533 0 8px 24px;
-  width: 80%;
+  width: 50%;
   text-align: left;
 }
 

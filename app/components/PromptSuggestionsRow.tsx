@@ -2,8 +2,8 @@ import React from 'react'
 import PromptSuggestionButton from './PromptSuggestionButton'
 const prompts = [
   "What is Seen Apps?",
-  "What is the Seen Apps mission?",
-  "What is the Seen Apps vision?",
+  "What is Seen Apps's mission?",
+  "What is Seen Apps's vision?",
 ]
 
 const PromptSuggestionsRow = ({ onPromptClick }) => {
