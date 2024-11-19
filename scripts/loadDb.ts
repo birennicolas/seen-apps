@@ -15,12 +15,6 @@ if (!ASTRA_DB_API_ENDPOINT || !ASTRA_DB_APPLICATION_TOKEN || !ASTRA_DB_NAMESPACE
     throw new Error("Missing required environment variables")
 }
 
-// const ASTRA_DB_NAMESPACE="default_keyspace"
-// const ASTRA_DB_COLLECTION="seen_apps_chatbot"
-// const ASTRA_DB_API_ENDPOINT="https://c36f6118-8de7-45da-8d81-162909e1a5ab-us-east-2.apps.astra.datastax.com"
-// const ASTRA_DB_APPLICATION_TOKEN="AstraCS:UxpHZtWbYBeexYTZqlISzNlf:01d6730b5ea3ad330d122a16d9dd880d9df77322178d372d9a824f4aa4d9848c"
-// const OPENAI_API_KEY="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"
-
 const openai = new OpenAI({apiKey: OPENAI_API_KEY})
 
 const seenAppsData = [ 
